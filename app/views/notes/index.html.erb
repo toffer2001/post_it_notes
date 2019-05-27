@@ -1,0 +1,8 @@
+<h1>Post It Notes and To-Do Items</h1>
+<% @notes.each do |n| %>
+  <ul>
+<%= link_to n.name, note_path(n) %>
+<%= link_to 'Edit', edit_note_path(n) %>
+<%= link_to 'Delete', n, method: :delete  %>
+</ul>
+<% end %>

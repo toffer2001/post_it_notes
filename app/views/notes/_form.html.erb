@@ -1,0 +1,14 @@
+<h1><%= @note.id ? 'Edit Note' : 'Create New Note' %></h1>
+<%= form_for @note do |n| %>
+<p>
+  <%= n.label :name %>
+  <%= n.text_field :name, required: true %>
+</p>
+
+  <p>
+  <%= n.label :body%>
+  <%= n.text_area :body, required: true %>
+ </p> 
+
+  <%= n.submit %>
+  <% end %>
